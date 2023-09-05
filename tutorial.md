@@ -9,3 +9,4 @@ git commit -m "commit message"
 git branch -M main
 git push origin main
 ```
+`alias push="git add . && git commit -m 'update' && git branch -M main && git push origin main" `
