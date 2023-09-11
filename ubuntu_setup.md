@@ -30,7 +30,7 @@ ibus-setup
 기본적으로 한/영 변환은 한/영키(`Hangul`)와 `Shift+Space`로 설정되어 있으나 요즘 키보드는 한/영키가 우측 Alt 키로 매핑되어있기 때문에 다음 설정을 통해 변경해주도록 하자. `Korean (Hangul) > ... > Preferences > Hangul Toggle Key > Add > (한/영키로 사용할 버튼 입력) > OK` 한/영키 적용 후 사용하지 않을 `Shift+Space`는 삭제하는 것이 편하다.  
 22.04 이전 버전은 [이곳](https://blu-y.github.io/carvis/guide/ubuntu_setting#41-korean-setting) 참조
 
-#### Ubuntu Kakao mirror
+#### Ubuntu Kakao Mirror
 우분투를 사용할 때 보통 `kr.archive.ubuntu.com` 아카이브 서버를 이용하여 데이터를 다운받게 되는데 속도가 조금 답답하다. 우분투 아카이브 서버의 내용을 그대로 반영하고 있는 카카오 미러 서버를 이용하면 조금 더 빠르게 우분투 아카이브의 자료를 업데이트하거나 다운로드 할 수 있다.  
 방법은 `/etc/apt/sources.list`의 `kr.archive.ubuntu.com`을 `mirror.kakao.com`으로 바꾸면 된다. 기본 텍스트 에디터를 이용하여 손으로 바꿀 수 있지만 Vi 에디터를 이용하면 한번에 바꿀 수 있다.  
 ```
@@ -49,3 +49,8 @@ apt update를 시켜보면 이전보다 빨라진 것을 확인할 수 있다.
 ```
 sudo apt update
 ```
+
+#### Useful Softwares
+
+[VS Code](https://code.visualstudio.com/)
+[Anaconda](https://www.anaconda.com/download#downloads)
