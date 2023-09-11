@@ -10,7 +10,8 @@
 
 ##### Installing ROS2
 
-1. ROS2 설치 : [Humble(22.04)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)`Note: Ubuntu, ROS2 설치 시 오류 (최신 NVIDIA 그래픽카드 관련)`
+1. ROS2 설치 : [Humble(22.04)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
+   `Note: Ubuntu, ROS2 설치 시 오류 (최신 NVIDIA 그래픽카드 관련)`
 2. 터틀봇 패키지 설치 :
    ```
    sudo apt update && sudo apt install ros-humble-turtlebot4-desktop
@@ -18,7 +19,7 @@
 
 #### Robot
 
-1. 터틀봇 이미지(22.04) 설치[링크](http://download.ros.org/downloads/turtlebot4/turtlebot4_standard_humble_1.0.0.zip)에서 터틀봇 이미지를 다운받아 터틀봇의 RPi에 장착된 sd카드에 설치한다. 설치 방법은 다음과 같다.
+1. 터틀봇 이미지(22.04) 설치[링크](http://download.ros.org/downloads/turtlebot4/turtlebot4_standard_humble_1.0.0.zip)에서 터틀봇 이미지를 다운받아 터틀봇의 RPi에 장착된 sd카드에 설치한다. PC에 터틀봇 sd카드를 장착한 뒤 다음 명령을 통해 설치한다.
 
    ```
    sudo apt install dcfldd
