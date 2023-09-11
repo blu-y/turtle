@@ -9,8 +9,8 @@ gedit ~/.bashrc
 텍스트 에디터에 나오는 명령어들은 새 터미널을 실행할 때 실행되는 명령이다. 마지막에 다음 명령어를 추가해 준 후 저장하자.
 ```
 # aliases
-alias eb='gedit ~/.bahsrc`
-alias sb='source ~/.bashrc`
+alias eb='gedit ~/.bashrc'
+alias sb='source ~/.bashrc'
 ```
 위와 같이 입력 후 저장한 후 터미널을 종료 후 재시작하거나 다음 명령을 입력하여 적용한다.
 ```
