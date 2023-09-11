@@ -52,5 +52,5 @@ sudo apt update
 
 ### Useful Softwares
 
-[VS Code](https://code.visualstudio.com/)
-[Anaconda](https://www.anaconda.com/download#downloads)
+[VS Code](https://code.visualstudio.com/)  
+[Anaconda](https://www.anaconda.com/download#downloads)  
