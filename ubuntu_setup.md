@@ -36,7 +36,7 @@ ibus-setup
 ```
 sudo vi /etc/apt/sources.list
 ```
-Vi 에디터는 키보드로 컨트롤 가능한 여러 기능을 제공하기 때문에 익숙해지면 편하게 텍스트를 편집할 수 있기 때문에   
+Vi 에디터는 키보드로 컨트롤 가능한 여러 기능을 제공하기 때문에 익숙해지면 편하게 텍스트를 편집할 수 있기 때문에 자주 사용된다.  
 `:`를 눌러야 입력모드에서 명령모드로 진입할 수 있으며 `%s` 명령을 통해 각 행의 처음 나오는 문구를 바꿀 수 있다. 다음 명령으로 `kr.archive.ubuntu.com`을 `mirror.kakao.com`으로 바꾸어준다.  
 ```
 :%s/kr.archive.ubuntu.com/mirror.kakao.com
