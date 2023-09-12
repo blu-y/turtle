@@ -1,4 +1,4 @@
-## Basic Setup
+## Turtlebot4 Basic Setup
 ### Note
 #### PC / RPi / Create
 터틀봇은 구동부인 Create3와 여러 센서가 장착된 Raspberry Pi 컴퓨터로 이루어져 있다. 편의상 우리가 사용하는 User PC는 `PC`, 라즈베리 파이는 `RPi`, Create3는 `Create`라고 작성하였다.
@@ -10,7 +10,7 @@
    ```
    sudo apt update && sudo apt install ros-humble-turtlebot4-desktop
    ```
-#### Robot
+### Robot
 
 1. 터틀봇 이미지(22.04) 설치[링크](http://download.ros.org/downloads/turtlebot4/turtlebot4_standard_humble_1.0.0.zip)에서 터틀봇 이미지를 다운받아 터틀봇의 RPi에 장착된 sd카드에 설치한다. PC에 터틀봇 sd카드를 장착한 뒤 다음 명령을 통해 설치한다.
 
