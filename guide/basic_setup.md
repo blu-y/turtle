@@ -13,7 +13,7 @@
 ### Robot
 
 1. 터틀봇 이미지(22.04) 설치  
-   [링크](http://download.ros.org/downloads/turtlebot4/turtlebot4_standard_humble_1.0.0.zip)에서 터틀봇 이미지를 다운받아 터틀봇의 RPi에 장착된 sd카드에 설치한다. PC에 터틀봇 sd카드를 장착한 뒤 다음 명령을 통해 설치한다.
+   [링크](http://download.ros.org/downloads/turtlebot4/)에서 터틀봇 이미지를 다운받아 터틀봇의 RPi에 장착된 sd카드에 설치한다. PC에 터틀봇 sd카드를 장착한 뒤 다음 명령을 통해 설치한다.
 
    ```
    sudo apt install dcfldd
@@ -24,15 +24,15 @@
    wget https://raw.githubusercontent.com/turtlebot/turtlebot4_setup/humble/scripts/sd_flash.sh
    bash sd_flash.sh /path/to/downloaded/image
    ```
-3. 터틀봇 AP 연결  
+2. 터틀봇 AP 연결  
    터틀봇을 동봉된 독에 올려놓으면 시작된다. 터틀봇을 처음 시작하면 터틀봇에 장착된 RPi는 AP(Access Point) 모드로 시작한다. PC의 와이파이(5GHz를 지원하여야 함)를 통해 `Turtlebot4` 와이파이에 연결한다. 비밀번호도 `Turtlebot4`이다.
-4. RPi에 SSH 접속  
+3. RPi에 SSH 접속  
    터틀봇 와이파이에 접속되었다면 SSH를 통해 터틀봇의 RPi에 접속할 수 있다. 접속 시 비밀번호는 `turtlebot4`이다.
 
    ```
    ssh ubuntu@10.42.0.1
    ```
-6. RPi를 와이파이에 연결  
+4. RPi를 와이파이에 연결  
    ssh를 통해 연결된 RPi에 다음 명령어를 사용하면 터틀봇 설정창에 진입한다.
 
    ```
@@ -42,7 +42,7 @@
    `ROS Setup`에 들어가 `Domain`에 부여된 숫자를 입력한 후 `save`한다.
    컴퓨터와 같은 와이파이에 연결하기 위하여 `Wi-Fi Setup`에 들어가 `Wi-Fi Mode`를 `Client`로 변경한 후, `SSID`와 `Password`에 사용할 와이파이 이름과 비밀번호를 입력한 후 `save`한다.
    설정이 완료되었다면 `Apply Settings`를 통해 설정을 적용한다.
-7. RPi IP 확인  
+5. RPi IP 확인  
    PC에서도 같은 Domain ID를 설정하여야 한다.
 
    ```
@@ -60,11 +60,11 @@
    ```
    ssh ubuntu@192.168.28.24
    ```
-8. Create 웹서버 접속  
+6. Create 웹서버 접속  
    새롭게 연결되면 구동부인 Create3는 웹브라우저에서 IP와 8080 포트를 통해 Create 웹서버에 접속할 수 있다. `192.168.28.24:8080`
-9. Create3 펌웨어 업그레이드  
+7. Create3 펌웨어 업그레이드  
    Humble로 터틀봇을 업글레이드 해주었기 때문에 Galactic으로 설치되어 있는 Create의 펌웨어 또한 업그레이드 시켜주어야 한다. [링크](https://iroboteducation.github.io/create3_docs/releases/overview/)에서 Humble용 최신 펌웨어를 받아, Create 웹서버의 `Upgrade`탭에서 업그레이드를 진행해 준다. Humble로 설정하여야 한다.
-10. 블루투스 컨트롤러 연결  
+8.  블루투스 컨트롤러 연결  
    동봉된 컨트롤러는 터틀봇과 미리 페어링되어 있어 켜면 바로 연결될 것이다. 만약 연결되지 않는다면 [링크 참조](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html#turtlebot-4-controller-setup)
 
 #### 수동 연결  
