@@ -27,7 +27,7 @@ angular:
   y: 0.0
   z: 0.0"
 ```
-`linear.x`의 값을 수정하여 로봇을 앞뒤로 움직일 수 있으며, `angular.z` 값을 수정하여 좌우로 회전할 수 있다.  
+`linear.x` 값을 수정하여 로봇을 앞뒤로 움직일 수 있으며, `angular.z` 값을 수정하여 좌우로 회전할 수 있다.  
 
 ### Creating Node
 위 예제에선 `teleop_twist_keyboard` 패키지의 `teleop_twist_keyboard` 노드를 사용해봤다. 이번엔 패키지와 노드를 만드는 방법에 대해 설명한다.  
