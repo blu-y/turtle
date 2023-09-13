@@ -66,5 +66,6 @@
    Humble로 터틀봇을 업글레이드 해주었기 때문에 Galactic으로 설치되어 있는 Create의 펌웨어 또한 업그레이드 시켜주어야 한다. [링크](https://iroboteducation.github.io/create3_docs/releases/overview/)에서 Humble용 최신 펌웨어를 받아, Create 웹서버의 `Upgrade`탭에서 업그레이드를 진행해 준다. Humble로 설정하여야 한다.
 10. 블루투스 컨트롤러 연결  
    동봉된 컨트롤러는 터틀봇과 미리 페어링되어 있어 켜면 바로 연결될 것이다. 만약 연결되지 않는다면 [링크 참조](https://turtlebot.github.io/turtlebot4-user-manual/setup/basic.html#turtlebot-4-controller-setup)
-11. 수동 연결  
+
+#### 수동 연결  
    와이파이가 변경되면 터틀봇에 연결할 수 없기 때문에 이더넷 케이블을 통해 연결하여야 한다. 이더넷 케이블로 PC와 터틀봇을 연결한 후 컴퓨터의 IP를 수동으로 설정해주어야 한다. `IP: 192.168.185.5`, `Subnet Mask: 255.255.255.0`, `Gateway: 192.168.185.1`로 PC의 IP를 수동으로 설정해 준 후 터틀봇의 유선 정적 IP인 `192.168.185.3`을 통해 SSH 접속한 후 와이파이의 이름과 비밀번호를 다시 설정할 수 있다.
