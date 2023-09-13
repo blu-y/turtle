@@ -3,7 +3,6 @@
 #### PC / RPi / Create
 터틀봇은 구동부인 Create3와 여러 센서가 장착된 Raspberry Pi 컴퓨터로 이루어져 있다. 편의상 우리가 사용하는 User PC는 `PC`, 라즈베리 파이는 `RPi`, Create3는 `Create`라고 작성하였다.
 ### PC
-#### Installing ROS2
 1. ROS2 설치 : [Humble(22.04)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)  
    `Note: Ubuntu, ROS2 설치 시 오류 (최신 NVIDIA 그래픽카드 관련)`
 2. 터틀봇 패키지 설치 :
