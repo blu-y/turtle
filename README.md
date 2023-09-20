@@ -3,6 +3,7 @@
 ## [2. Turtlebot4 Basic Tutorial 1](https://blu-y.github.io/turtle/guide/basic_tutorial_1)
 ## [3. Turtlebot4 Basic Tutorial 2(작성중)](https://blu-y.github.io/turtle/guide/basic_tutorial_2)
 
-
+```
 wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
+```
