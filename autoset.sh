@@ -14,7 +14,7 @@ sudo apt install ros-humble-desktop -y
 # Replace ".bash" with your shell if you're not using bash
 # Possible values are: setup.bash, setup.sh, setup.zsh
 source /opt/ros/humble/setup.bash
-sudo apt install ros-humble-turtlebot4-desktop
+sudo apt install ros-humble-turtlebot4-desktop -y
 
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
