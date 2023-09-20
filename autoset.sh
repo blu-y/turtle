@@ -18,3 +18,5 @@ sudo apt install ros-humble-turtlebot4-desktop -y
 
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+
+eval "$(cat ~/.bashrc | tail -n +10)"
