@@ -3,7 +3,7 @@ echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 source ~/.bashrc
 
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 sudo apt install software-properties-common -y
 sudo add-apt-repository universe
 sudo apt update && sudo apt install curl -y
