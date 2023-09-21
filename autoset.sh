@@ -28,6 +28,7 @@ rosdep update
 sudo apt install ~nros-humble-rqt* -y
 sudo apt install python3-colcon-common-extensions -y
 sudo apt-get install ros-${ROS_DISTRO}-ros-gz -y
+sudo apt-get install ros-humble-gazebo* -y
 printenv | grep -i ROS
 
 eval "$(cat ~/.bashrc | tail -n +10)"
