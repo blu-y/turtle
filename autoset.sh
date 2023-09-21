@@ -18,11 +18,10 @@ sudo apt install ros-humble-desktop -y
 # Possible values are: setup.bash, setup.sh, setup.zsh
 source /opt/ros/humble/setup.bash
 sudo apt install ros-humble-turtlebot4-desktop -y
-
+ibus-setup-hangul
+gnome-control-center
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 eval "$(cat ~/.bashrc | tail -n +10)"
 
-ibus-setup-hangul
-gnome-control-center
