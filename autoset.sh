@@ -22,6 +22,13 @@ ibus-setup-hangul
 gnome-control-center
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+sudo apt-get install python3-rosdep -y
+sudo rosdep init
+rosdep update
+sudo apt install ~nros-humble-rqt* -y
+sudo apt install python3-colcon-common-extensions -y
+sudo apt-get install ros-${ROS_DISTRO}-ros-gz -y
+printenv | grep -i ROS
 
 eval "$(cat ~/.bashrc | tail -n +10)"
 
