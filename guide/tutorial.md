@@ -4,6 +4,11 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
 ```
+ssh-keygen -t rsa
+cd ~/.ssh
+```
+
+```
 git add .
 git commit -m "commit message"
 git branch -M main
