@@ -5,7 +5,6 @@ source ~/.bashrc
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
 sudo apt update
 sudo apt install fonts-noto-cjk-extra gnome-user-docs-ko hunspell-ko ibus-hangul language-pack-gnome-ko language-pack-ko hunspell-en-gb hunspell-en-au hunspell-en-ca hunspell-en-za -y
-ibus restart
 sudo apt update && sudo apt upgrade -y
 sudo apt install software-properties-common -y
 sudo add-apt-repository universe
@@ -16,8 +15,6 @@ sudo apt update
 sudo apt install ros-humble-desktop-full -y
 source /opt/ros/humble/setup.bash
 sudo apt install ros-humble-turtlebot4-desktop -y
-ibus-setup-hangul
-gnome-control-center
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt-get install python3-rosdep -y
@@ -26,6 +23,9 @@ rosdep update
 sudo apt install ~nros-humble-rqt* -y
 sudo apt install python3-colcon-common-extensions -y
 printenv | grep -i ROS
+ibus restart
+ibus-setup-hangul
+gnome-control-center
 
 eval "$(cat ~/.bashrc | tail -n +10)"
 
