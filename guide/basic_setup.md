@@ -80,5 +80,6 @@
 #### 터틀봇 4 테스트
    ssh로 접속 후 다음 명령으로 터틀봇 4 테스트를 진행할 수 있다
    ```
+   source /opt/ros/humble/setup.bash
    ros2 run turtlebot4_tests ros_tests
    ```
