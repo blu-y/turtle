@@ -1,5 +1,11 @@
 ## Turtlebot4 Basic Tutorial 1
 
+### Testing Turtlebot4
+터틀봇에 ssh로 접속 후 다음 명령을 실행하면 전반적인 터틀봇4의 기능을 시험해볼 수 있다.  
+```
+ros2 run turtlebot4_tests ros_tests
+```
+
 ### Keyboard Teleoperation
 ROS2 통신을 통해 PC의 키보드로 같은 ROS2 네트워크에 연결된 터틀봇을 움직일 수 있다. `teleop_twist_keyboard`패키지를 설치한다.  
 ```
