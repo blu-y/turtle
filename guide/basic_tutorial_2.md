@@ -5,6 +5,7 @@
 #### SLAM
 다음 명령을 통해 SLAM 을 실행할 수 있다.
 ```
+sudo apt install ros-humble-turtlebot4-desktop
 sudo apt install ros-humble-turtlebot4-navigation
 ros2 launch turtlebot4_navigation slam.launch.py
 ```
