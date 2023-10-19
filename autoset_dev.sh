@@ -30,7 +30,6 @@ sudo apt install ros-humble-octomap-ros libgoogle-glog-dev libgflags-dev -y
 sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation ros-humble-teleop-twist-keyboard -y
 printenv | grep -i ROS
 
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 echo "export ROS_DOMAIN_ID=0" >> ~/.bashrc
 
