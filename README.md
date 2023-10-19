@@ -7,4 +7,5 @@
 ```
 wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
+source ~/.bashrc
 ```
