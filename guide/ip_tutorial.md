@@ -6,7 +6,14 @@
 행렬로써의 이미지  
 image as an array (coordinage, color)
 
-![lenna.png](/src/lenna.png){width=480 height=480}
+![1.png](../src/그림1.png)
+![2.png](/src/그림2.png)
+![3.png](/src/그림3.png)
+![4.png](/src/그림4.png)
+![5.png](/src/그림5.png)
+![6.png](/src/그림6.png)
+![7.png](/src/그림7.png)
+![8.png](/src/그림8.png)
 
 
 #### Color Space
