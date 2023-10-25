@@ -6,28 +6,26 @@
 행렬로써의 이미지  
 image as an array (coordinage, color)
 
-![1.png](../src/그림1.png)
-![2.png](/src/그림2.png)
-![3.png](/src/그림3.png)
-![4.png](/src/그림4.png)
-![5.png](/src/그림5.png)
-![6.png](/src/그림6.png)
-![7.png](/src/그림7.png)
-![8.png](/src/그림8.png)
+![1.png](../src/그림1.png){: width="50%" height="50%"}
+
+![2.png](../src/그림2.png)
+![3.png](../src/그림3.png)
 
 
 #### Color Space
 색영역  
 RGB, HSV, YUV
+![6.png](../src/그림6.png)
+![7.png](../src/그림7.png)
 
 #### Histogram
 히스토그램    
+![4.png](../src/그림4.png)
+![5.png](../src/그림5.png)
 
-#### Filter
+#### Filter, Edge
 필터  
-
-#### Edge
-엣지  
+![8.png](../src/그림8.png)
 
 #### DL
 
