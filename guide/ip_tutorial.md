@@ -3,9 +3,11 @@
 ### Traditional Image Processing
 
 #### Array-like image
-이미지는 색으로 이루어져 있는 배열이라고 볼 수 있다. 
+행렬로써의 이미지  
+image as an array (coordinage, color)
 
-<img src="src/lenna.png" alt="lenna" width="200"/>
+![lenna.png](/src/lenna.png){width=480 height=480}
+
 
 #### Color Space
 색영역  
