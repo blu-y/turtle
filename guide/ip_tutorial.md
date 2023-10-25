@@ -3,34 +3,31 @@
 ### Traditional Image Processing
 
 #### Array-like image
-행렬로써의 이미지  
-image as an array (coordinage, color)
-
+아날로그 이미지는 연속적인 값을 가지게 되어 컴퓨터로 처리가 힘들다. 이를 디지털로 처리하기 위해서 양자화와 샘플링 과정을 거치게 된다.  
+양자화는 공간 영역을 디지털화 하는 과정이고, 샘플링은 이미지 강도를 디지털화 하는 과정이다. 이렇게 양자화와 샘플링을 거친 이미지는 행렬로 표현이 가능하다.  
 ![1.png](../src/그림1.png){: width="50%" height="50%"}
-
-![2.png](../src/그림2.png)
-![3.png](../src/그림3.png)
+이미지를 공간으로 보통 영상처리에서는 좌측 상단을 기준(0,0)으로 (y,x)로 표현한다.  
+![2.png](../src/그림2.png){: width="50%" height="50%"}
 
 
 #### Color Space
-색영역  
-RGB, HSV, YUV
-![6.png](../src/그림6.png)
-![7.png](../src/그림7.png)
+좌표 안의 색을 표현하는 방법을 색영역이라고 한다. 흔히 쓰는 RGB는 Red, Green, Blue로 나누어 표현하는 방법이고, 용도에 따라 HSV, YUV 등이 있다.  
+![6.png](../src/그림6.png){: width="50%" height="50%"}
+![7.png](../src/그림7.png){: width="50%" height="50%"}
 
 #### Histogram
-히스토그램    
-![4.png](../src/그림4.png)
-![5.png](../src/그림5.png)
+히스토그램은 이미지의 색상(강도) 분포를 나타낸다. 이미지의 히스토그램을 보면 이미지가 어떤 색상을 많이 가지고 있는지 분포를 확인할 수 있다.  
+![4.png](../src/그림4.png){: width="50%" height="50%"}
+![5.png](../src/그림5.png){: width="50%" height="50%"}
 
-#### Filter, Edge
-필터  
-![8.png](../src/그림8.png)
+#### Filter
+이미지의 정보를 얻기 위해서 여러 수학적인 과정을 거치게 되는데 이를 수행하기 위해 필요한 것이 필터이다. 필터는 컨볼루션 연산을 통해 이미지를 연산할 수 있는 연산자이다.  
+필터는 이미지 미분, 엣지 검출, 노이즈 제거, 이미지 품질 향상 등에 이용된다. 필터는 커널, 마스크, 윈도우 등의 이름으로 불리기도 한다.  
+![8.png](../src/그림8.png){: width="50%" height="50%"}
 
 #### DL
-
-
-Yolo, RCNN, ViT, SwinT
+또한 최근에는 딥러닝을 활용한 기술을 통해 전통적인 영상처리만 사용한 방법보다 더 정확한 문제 해결이 가능하다. ex) Yolo, RCNN, ViT, SwinT
+![9.png](../src/그림9.png){: width="50%" height="50%"}
 
 #### OpenCV
 
