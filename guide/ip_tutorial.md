@@ -1,70 +1,28 @@
 ## Image Processing Tutorial
 
-### Rviz2
-`view_robot` launch
-```
-ros2 launch turtlebot4_viz view_robot.launch.py
-```
-Find camera topic `/oakd/rgb/preview/image_raw`
-
-
-### CV_Bridge
-In python use cv_bridge to make msg to array
-
-make `image_subscriber.py` file
-```
-#!/usr/bin/env python
-import rclpy
-from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
-from sensor_msgs.msg import Image
-import numpy as np
-import cv2
-from cv_bridge import CvBridge
-
-
-class ImageSubscriber(Node) :
-   def __init__(self) :
-     super().__init__('image_subscriber')
-     self.bridge = CvBridge() 
-     self.image_sub = self.create_subscription(
-        Image, '/oakd/rgb/preview/image_raw', self.image_cb, qos_profile_sensor_data)
-     self.image = []
-
-   def image_cb(self, msg) :
-     self.image = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
-     cv2.imshow('img', self.image)
-     cv2.waitKey(1)
-     
-def main(args=None) :
-  rclpy.init(args=args)
-  node = ImageSubscriber()
-  rclpy.spin(node)
-  node.destroy_node()
-  rclpy.shutdown()
-
-if __name__ == '__main__' :
-  main()
-```
-Run Python file
-```
-python3 image_subscriber.py
-```
-
-### Basic Image Processing
+### Traditional Image Processing
 
 #### Array-like image
+행렬로써의 이미지  
 image as an array (coordinage, color)
+<img src="/src/lenna.png" alt="lenna" width="200"/>
 
 #### Color Space
+색영역  
 RGB, HSV, YUV
 
 #### Histogram
-다음 
+히스토그램    
 
-#### Filter, Edge
+#### Filter
+필터  
+
+#### Edge
+엣지  
 
 #### DL
+
+
 Yolo, RCNN, ViT, SwinT
 
 #### OpenCV
@@ -180,4 +138,54 @@ if __name__ == "__main__":
     path_to_image_1 = "test1.png"
     path_to_image_2 = "test2.png"
     main(path_to_image_1, path_to_image_2)
+```
+
+### Rviz2
+ROS에서 이미지를 받기 위해선 이미지의 토픽을 알아야 한다. Rviz를 이용하면 토픽을 확인할 수 있다. `view_robot` 런치 파일을 실행하여 토픽을 찾아보자.  
+```
+ros2 launch turtlebot4_viz view_robot.launch.py
+```
+`Add` -> `Topic` 에 들어가면 여러 토픽이 나온다. 그 중 이미지와 관련된 것을 눌러보면 카메라 화면이 보이는 토픽이 터틀봇에서 사용하는 토픽이다.  
+터틀봇에서는 OAKD 카메라가 설치되어 있다. `/oakd/rgb/preview/image_raw` 가 터틀봇 카메라의 이미지 토픽이다.
+
+
+### CV_Bridge
+카메라를 통해 ROS로 연결되는 토픽 메세지는 python에서 사용이 가능하도록 변환 과정이 필요하다. `cv_bridge` 라이브러리가 해당 과정을 도와준다. 다음 `image_subscriber.py` 파일을 작성해서 실행해보자.
+```
+#!/usr/bin/env python
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
+from sensor_msgs.msg import Image
+import numpy as np
+import cv2
+from cv_bridge import CvBridge
+
+
+class ImageSubscriber(Node) :
+   def __init__(self) :
+     super().__init__('image_subscriber')
+     self.bridge = CvBridge() 
+     self.image_sub = self.create_subscription(
+        Image, '/oakd/rgb/preview/image_raw', self.image_cb, qos_profile_sensor_data)
+     self.image = []
+
+   def image_cb(self, msg) :
+     self.image = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
+     cv2.imshow('img', self.image)
+     cv2.waitKey(1)
+     
+def main(args=None) :
+  rclpy.init(args=args)
+  node = ImageSubscriber()
+  rclpy.spin(node)
+  node.destroy_node()
+  rclpy.shutdown()
+
+if __name__ == '__main__' :
+  main()
+```
+Run Python file
+```
+python3 image_subscriber.py
 ```
