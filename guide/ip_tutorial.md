@@ -26,7 +26,7 @@
 ![8.png](../src/그림8.png){: width="50%" height="50%"}
 
 #### DL
-또한 최근에는 딥러닝을 활용한 기술을 통해 전통적인 영상처리만 사용한 방법보다 더 정확한 문제 해결이 가능하다. ex) Yolo, RCNN, ViT, SwinT
+또한 최근에는 딥러닝을 활용한 기술을 통해 전통적인 영상처리만 사용한 방법보다 더 정확한 문제 해결이 가능하다. ex) Yolo, RCNN, ViT, SwinT  
 ![9.png](../src/그림9.png){: width="50%" height="50%"}
 
 #### OpenCV
@@ -151,6 +151,7 @@ ros2 launch turtlebot4_viz view_robot.launch.py
 ```
 `Add` -> `Topic` 에 들어가면 여러 토픽이 나온다. 그 중 이미지와 관련된 것을 눌러보면 카메라 화면이 보이는 토픽이 터틀봇에서 사용하는 토픽이다.  
 터틀봇에서는 OAKD 카메라가 설치되어 있다. `/oakd/rgb/preview/image_raw` 가 터틀봇 카메라의 이미지 토픽이다.
+(주의: 터틀봇이 독에 연결되어 있을 경우 절전모드로 전환되어 카메라 토픽이 발행되지 않음)
 
 
 ### CV_Bridge
