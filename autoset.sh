@@ -2,7 +2,9 @@ echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 source ~/.bashrc
 
+출처: 우분투 저장소 변경 https://weftnwarp.kr/site-it/?p=4522
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
+sudo vi /etc/apt/sources.list +%s/security.ubuntu.com/mirror.kakao.com +wq!
 sudo apt update
 sudo apt install fonts-noto-cjk-extra gnome-user-docs-ko hunspell-ko ibus-hangul language-pack-gnome-ko language-pack-ko hunspell-en-gb hunspell-en-au hunspell-en-ca hunspell-en-za -y
 ibus restart
