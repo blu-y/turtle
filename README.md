@@ -9,3 +9,5 @@ wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
 source ~/.bashrc
 ```
+
+`contact 카카오워크 윤준영(인공지능학과)`
