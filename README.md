@@ -5,7 +5,7 @@
 ## [4. Image Processing Tutorial](https://blu-y.github.io/turtle/guide/ip_tutorial)
 
 ##### User PC Auto-setup
-Ubuntu 22.04 설치 후 자동 설정명령어
+Ubuntu 22.04 설치 후 자동설정 명령어
 ```
 wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
