@@ -12,4 +12,4 @@ bash autoset.sh
 source ~/.bashrc
 ```
 ##### Contact
-(윤준영(인공지능학과))[https://kakaowork.com/fl/EN3VXjFzlB64yf1]
+[카카오워크](https://kakaowork.com/fl/EN3VXjFzlB64yf1)
