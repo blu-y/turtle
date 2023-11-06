@@ -64,7 +64,7 @@
    ssh ubuntu@192.168.28.24
    ```
 6. Create 웹서버 접속  
-   새롭게 연결되면 구동부인 Create3는 웹브라우저에서 IP와 8080 포트를 통해 Create 웹서버에 접속할 수 있다. `192.168.28.24:8080`
+   새롭게 연결되면 구동부인 Create3는 웹브라우저에서 IP와 8080 포트를 통해 Create 웹서버에 접속할 수 있다. ex) `192.168.28.24:8080`
 7. Create3 펌웨어 업그레이드  
    Humble로 터틀봇을 업글레이드 해주었기 때문에 Galactic으로 설치되어 있는 Create의 펌웨어 또한 업그레이드 시켜주어야 한다. [링크](https://iroboteducation.github.io/create3_docs/releases/overview/)에서 Humble용 최신 펌웨어를 받아, Create 웹서버의 `Upgrade`탭에서 업그레이드를 진행해 준다. Humble로 설정하여야 한다.
 8.  블루투스 컨트롤러 연결  
