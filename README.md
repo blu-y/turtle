@@ -12,4 +12,4 @@ bash autoset.sh
 source ~/.bashrc
 ```
 ##### Contact
-[카카오워크](https://kakaowork.com/fl/EN3VXjFzlB64yf1)
+[kakaowork](https://kakaowork.com/fl/EN3VXjFzlB64yf1)
