@@ -5,7 +5,7 @@
 ## [4. Image Processing Tutorial](https://blu-y.github.io/turtle/guide/ip_tutorial)
 
 ##### User PC Auto-setup
-Ubuntu 22.04 설치 후 자동설정 명령어
+Control PC Ubuntu 22.04 첫 설치 후 자동설정 명령어 (첫 설치가 아닐 경우 오류 발생할 수 있음)
 ```
 wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
