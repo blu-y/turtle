@@ -298,7 +298,7 @@ ros2 launch turtlebot4_navigation localization.launch.py map:=map_name.yaml
 
 ##### Nav2
 Nav2는 여러 내비게이션 도구를 사용할 수 있는 패키지입니다. 맵 상에 목표 위치를 선택하면 그 곳으로 로봇을 자동으로 이동시킬 수 있습니다.  
-`localization` 노드가 켜진 상태로 `nav2` 노드를 실행합니다.  
+`localization` 노드가 켜진 상태로 새 터미널을 열어 `nav2` 노드를 실행합니다.   
 ```
 ros2 launch turtlebot4_navigation nav2.launch.py
 ```
