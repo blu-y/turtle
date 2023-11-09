@@ -313,7 +313,9 @@ Rviz2에서 여러 Navigation 툴을 이용할 수 있습니다.
 * Nav2 Goal: 원하는 goal pose를 설정해 주면 Nav2가 로봇을 goal pose로 이동시키려고 시도합니다. 사용하기 전 initial pose를 설정해주어야 합니다.
 
 
+<center>
 <video width="1080" controls>
     <source src="https://github-production-user-asset-6210df.s3.amazonaws.com/48089846/243330040-bcf685e4-2471-450e-8b77-e028a46bd0f7.mp4" type="video/mp4">
     video unavailable
 </video>
+</center>
