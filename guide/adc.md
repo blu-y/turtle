@@ -3,15 +3,16 @@
 자율주행경진대회 참가자들을 위한 가이드입니다.
 
 ### Contents
-1. 터틀봇 사용법  
-   1.1 ROS Domain 설정  
-   1.2 터틀봇 켜고 끄기  
-2. Ubuntu  
-3. ROS2  
-   3.1 Topic  
-   3.2 Publisher, Subscriber  
-   3.3 Service, Action  
-4. 
+1. How to Set PC & Turtlebot4  
+   1.1 ROS Domain Setting  
+   1.2 Turning On/Off  
+2. ROS2  
+   2.1 Node, Topic, Message  
+   2.2 Service, Action  
+   2.3 Useful Nodes
+3. Mapping & Navigation  
+   3.1 SLAM & Rviz2  
+   3.2 Localization & Nav2  
 
 ### 1. How to Set PC & Turtlebot4
 ```
@@ -94,10 +95,10 @@ ros2 topic info /cmd_vel
 `geometry_msgs/Vector3`는 `x`, `y`, `z`라는 이름의 실수 `float64`로 정의되어 있습니다.  
 이를 통해 우리는 `/cmd_vel`은 linear과 angular, 각각 x, y, z 값으로 이루어진 것을 알 수 있습니다.  
 
-#### 2.3 Service, Action  
+#### 2.2 Service, Action   
 토픽 이외에도 서비스와 액션을 통해 여러 동작을 할 수 있습니다. 이는 아래 예제에서 설명하겠습니다.  
 
-#### 2.4 Useful Nodes
+#### 2.3 Useful Nodes
 ##### Teleoperation
 키보드를 통해 터틀봇을 움직일 수 있는 노드입니다.  
 다음 명령을 통해 `teleop_twist_keyboard.py` 코드를 작성해봅시다.  
@@ -254,10 +255,10 @@ if __name__ == '__main__' :
 ```
 python3 lidar_sub.py
 ```
-### 4. Mapping & Navigation
+### 3. Mapping & Navigation
 터틀봇을 활용하여 매핑을 하거나 내비게이션을 하는 등의 여러 패키지들을 사용할 수 있습니다. 
 
-#### 4.1 SLAM & Rviz2
+#### 3.1 SLAM & Rviz2
 ##### SLAM
 SLAM은 현재 위치를 추정하면서 지도를 작성하는 노드입니다. 터미널을 열어 SLAM 노드를 실행해봅시다.  
 ```
@@ -287,7 +288,7 @@ ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
 result가 0이 나와야 제대로 저장된 것입니다.  
 ![t14.png](../src/t14.png){: width="80%" height="80%"}  #result=0  
 
-#### 4.2 Localization & Nav2
+#### 3.2 Localization & Nav2
 ##### Localization
 로봇의 현재 위치를 추정하는 것을 localization이라고 합니다.  
 `localization` 노드는 현재 위치의 초기값을 지정해주면 현재 위치를 추정할 수 있습니다.  
