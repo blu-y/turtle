@@ -22,33 +22,21 @@
 
 #### 1.1 ROS Domain Setting
 먼저 독에 장착되어 있는 터틀봇 하나를 가져옵니다. 정면의 5개의 LED가 모두 점등되어 있을 경우 정상이며, Display를 통해 IP와 잔여 배터리의 양을 확인할 수 있습니다.  
-<center>
 ![t1.jpg](../src/t1.jpg){: width="50%" height="50%"}  
-</center>
   
 Display에 표시된 ip주소, 위 사진의 경우 `192.168.50.134`를 확인하고 PC의 브라우저를 열어 뒤에 `:8080`을 붙여 주소창에 입력해주세요.  
 `Application` -> `Configuration`에 들어가 `ROS2 Domain ID`를 확인해주세요. 아래 사진의 경우 `7`입니다.  
-<center>
 ![t2.png](../src/t2.png)  
 ![t3.png](../src/t3.png)  
-</center>
 브라우저를 닫고 `Ctrl + Alt + T`를 눌러 터미널 창을 켠 후 `gedit ~/.bashrc` 또는 `eb`를 입력해주세요.  
-<center>
 ![t4.png](../src/t4.png)  
-</center>
 텍스트 에디터가 뜨는데 마지막 줄에 있는 `export ROS_DOMAIN_ID=` 뒤에 아까 확인한 숫자를 넣고 `Save`후 끕니다.   
-<center>
 ![t5.png](../src/t5.png)  
-</center>
 터미널 창에 `source ~/.bashrc` 또는 `sb`를 입력해 바꾼 설정을 적용시킵니다.  
-<center>
 ![t6.png](../src/t6.png)  
-</center>
 터틀봇과 PC가 통신할 준비를 완료했습니다.  
 `ros2 topic list`를 입력하였을 때 다음과 같이 여러 토픽이 나오면 잘 연결된 것입니다.  
-<center>
 ![t7.png](../src/t7.png)  
-</center>
 
 #### 1.2 Turning On/Off
 오류가 발생하여 터틀봇을 끄고 싶을 경우 앞에 있는 라이트링이 있는 버튼을 7초간 누르시면 3번 깜빡하고 소리가 울리며 꺼집니다.  
@@ -94,20 +82,14 @@ ROS는 Robot Operation System으로 로봇 소프트웨어 개발을 위한 프�
 ros2 topic info /cmd_vel
 ```
   
-<center>
 ![t8.png](../src/t8.png)  
-</center>
   
 `/cmd_vel`은 `geometry_msgs/msg/Twist`라는 Type을 통해 메세지를 송수신합니다.  
 `geometry_msgs/msg/Twist`를 검색하면 쉽게 `ROS Documentation`에서 DataType 정보를 확인할 수 있습니다.  
-<center>
 ![t9.png](../src/t9.png){: width="70%" height="70%"}  
-</center>
 
 `geometry_msgs/Twist`는 `linear`와 `angular`라는 이름의 `geometry_msgs/Vector3` 메세지로 다시 정의되어 있습니다. 이를 클릭하면,  
-<center>
 ![t10.png](../src/t10.png){: width="70%" height="70%"}  
-</center>
 
 `geometry_msgs/Vector3`는 `x`, `y`, `z`라는 이름의 실수 `float64`로 정의되어 있습니다.  
 이를 통해 우리는 `/cmd_vel`은 linear과 angular, 각각 x, y, z 값으로 이루어진 것을 알 수 있습니다.  
@@ -281,9 +263,7 @@ SLAM은 현재 위치를 추정하면서 지도를 작성하는 노드입니다.
 ```
 ros2 launch turtlebot4_navigation slam.launch.py
 ```
-<center>
 ![t11.png](../src/t11.png){: width="80%" height="80%"}  #터미널창
-</center>
 SLAM 노드는 터틀봇의 라이다 토픽을 받아 지도를 작성하여 토픽을 내보내지만 시각적으로 보여주지는 않습니다. 
 
 ##### Rviz2
@@ -292,16 +272,12 @@ SLAM노드를 켜 놓은 상태로 다음 명령으로 rviz를 실행해봅시�
 ```
 ros2 launch turtlebot4_viz view_robot.launch.py
 ```
-<center>
 ![t12.png](../src/t12.png){: width="80%" height="80%"}  #Rviz창
-</center>
 위의 `teleop_twist_keyboard`노드를 이용하여 터틀봇을 움직이면 지도를 작성하는 것을 확인할 수 있습니다. 
 ```
 python3 teleop_twist_keyboard.py
 ```
-<center>
 ![t13.png](../src/t13.png){: width="80%" height="80%"}  #제작된 맵  
-</center>
   
 다음 서비스를 통해 제작된 맵을 저장할 수 있습니다.  
 ```
@@ -309,9 +285,7 @@ ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_name'"
 ```
 result가 0이 나와야 제대로 저장된 것입니다.  
-<center>
 ![t14.png](../src/t14.png){: width="80%" height="80%"}  #result=0  
-</center>
 
 #### 4.2 Localization & Nav2
 ##### Localization
