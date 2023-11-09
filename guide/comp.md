@@ -25,18 +25,18 @@
 먼저 독에 장착되어 있는 터틀봇 하나를 가져옵니다. 정면의 5개의 LED가 모두 점등되어 있을 경우 정상이며, Display를 통해 IP와 잔여 배터리의 양(70%)을 확인할 수 있습니다.  
 ![t1.jpg](../src/t1.jpg){: width="50%" height="50%"}  
 Display에 표시된 ip주소, 위 사진의 경우 `192.168.50.134`를 확인하고 PC의 브라우저를 열어 뒤에 `:8080`을 붙여 주소창에 입력해주세요.  
-![t2.png](../src/t2.png){: width="50%" height="50%"}  
+![t2.png](../src/t2.png)  
 `Application` -> `Configuration`에 들어가 `ROS2 Domain ID`를 확인해주세요. 아래 사진의 경우 `7`입니다.  
-![t3.png](../src/t3.png){: width="50%" height="50%"}  
+![t3.png](../src/t3.png)  
 브라우저를 닫고 `Ctrl + Alt + T`를 눌러 터미널 창을 켠 후 `gedit ~/.bashrc` 또는 `eb`를 입력해주세요.  
-![t4.png](../src/t4.png){: width="50%" height="50%"}  
+![t4.png](../src/t4.png)  
 텍스트 에디터가 뜨는데 마지막 줄에 있는 `export ROS_DOMAIN_ID=` 뒤에 아까 확인한 숫자를 넣고 `Save`후 끕니다.   
-![t5.png](../src/t5.png){: width="50%" height="50%"}  
+![t5.png](../src/t5.png)  
 터미널 창에 sb를 눌러 바꾼 설정을 적용시킵니다.  
-![t6.png](../src/t6.png){: width="50%" height="50%"}  
+![t6.png](../src/t6.png)  
 터틀봇과 PC가 통신할 준비를 완료했습니다.  
 `ros2 topic list`를 입력하였을 때 다음과 같이 여러 토픽이 나오면 잘 연결된 것입니다.  
-![t7.png](../src/t7.png){: width="50%" height="50%"}  
+![t7.png](../src/t7.png)  
 
 #### 1.2 터틀봇 켜고 끄기
 오류가 발생하여 터틀봇을 끄고 싶을 경우 앞에 있는 라이트링이 있는 버튼을 7초간 누르시면 3번 깜빡하고 소리가 울리며 꺼집니다.  
