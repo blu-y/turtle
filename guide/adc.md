@@ -310,7 +310,6 @@ ros2 launch turtlebot4_navigation nav2.launch.py
 ```
 ros2 launch turtlebot4_viz view_robot.launch.py
 ```
-![t15.png](../src/t15.png){: width="80%" height="80%"}  
 
 Rviz2에서 여러 Navigation 툴을 이용할 수 있습니다.  
 ![t16.png](../src/t16.png)    
