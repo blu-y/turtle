@@ -84,7 +84,7 @@ ROS는 Robot Operation System으로 로봇 소프트웨어 개발을 위한 프�
 ros2 topic info /cmd_vel
 ```
   
-![t8.png](../src/t8.png){: width="60%" height="60%"}  
+![t8.png](../src/t8.png)  
   
 `/cmd_vel`은 `geometry_msgs/msg/Twist`라는 Type을 통해 메세지를 송수신합니다.  
 `geometry_msgs/msg/Twist`를 검색하면 쉽게 `ROS Documentation`에서 DataType 정보를 확인할 수 있습니다.  
