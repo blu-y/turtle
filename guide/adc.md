@@ -1,6 +1,7 @@
 # 2023 한국항공대 자율주행 경진대회
 ## Turtlebot Quickstart Guide  
-자율주행경진대회 참가자들을 위한 가이드입니다.
+자율주행경진대회 참가자들을 위한 가이드입니다.  
+주기적으로 내용이 추가되거나 변경될 수 있습니다.  
 
 ### Contents
 1. How to Set PC & Turtlebot4  
@@ -313,7 +314,7 @@ ros2 launch turtlebot4_viz view_robot.launch.py
 
 Rviz2에서 여러 Navigation 툴을 이용할 수 있습니다.  
 ![t16.png](../src/t16.png)    
-* 2D Pose Estimate : 대략적인 로봇의 위치를  찍어주면 현재 위치를 추정할 수 있습니다.  
+* 2D Pose Estimate : 대략적인 로봇의 위치를 찍어주면 현재 위치를 추정할 수 있습니다.  
 ![t17.gif](../src/t17.gif){: width="80%" height="80%"}  
 * Publish Point: Map 상에 point를 publish합니다. /clicked_point 토픽으로 publish 됩니다. (`ros2 topic echo /clicked_point`로 확인)  
 ![t18.gif](../src/t18.gif){: width="80%" height="80%"}  
