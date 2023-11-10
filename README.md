@@ -11,5 +11,6 @@ wget https://raw.githubusercontent.com/blu-y/turtle/main/autoset.sh
 bash autoset.sh
 source ~/.bashrc
 ```
+## [자율주행경진대회 Quick Start Guide](https://blu-y.github.io/turtle/guide/adc)
 ##### Contact
 [kakaowork](https://kakaowork.com/fl/EN3VXjFzlB64yf1)
