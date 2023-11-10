@@ -84,7 +84,7 @@ ROS는 Robot Operation System으로 로봇 소프트웨어 개발을 위한 프�
 ros2 topic info /cmd_vel
 ```
   
-![t8.png](../src/t8.png)  
+![t8.png](../src/t8.png){: width="60%" height="60%"}  
   
 `/cmd_vel`은 `geometry_msgs/msg/Twist`라는 Type을 통해 메세지를 송수신합니다.  
 `geometry_msgs/msg/Twist`를 검색하면 쉽게 `ROS Documentation`에서 DataType 정보를 확인할 수 있습니다.  
@@ -106,6 +106,7 @@ ros2 topic info /cmd_vel
 ```
 gedit teleop_twist_keyboard.py
 ```
+gedit을 이용하여 코드를 작성하셔도 되고, VS Code등의 IDE를 설치하여 사용하셔도 됩니다.  
 ```
 #!/usr/bin/env python3
 import rclpy
@@ -166,7 +167,7 @@ def main(args=None):
 		pub.publish(twist)
 		termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
 ```
-저장한 후 다음 명령을 통해 코드를 실행하여 터틀봇을 움직일 수 있습니다.  
+모두 작성하면 저장한 후 다음 명령을 통해 코드를 실행하면 `u`, `i`, `o`, `j`, `k`, `l` 키를 이용해 키보드로 터틀봇을 움직일 수 있습니다.  
 ```
 python3 teleop_twist_keyboard.py
 ```
