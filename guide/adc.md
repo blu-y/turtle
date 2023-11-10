@@ -84,7 +84,7 @@ ROS는 Robot Operation System으로 로봇 소프트웨어 개발을 위한 프�
 ros2 topic info /cmd_vel
 ```
   
-![t8.png](../src/t8.png)  
+![t8.png](../src/t8.png){: width="60%" height="60%"}  
   
 `/cmd_vel`은 `geometry_msgs/msg/Twist`라는 Type을 통해 메세지를 송수신합니다.  
 `geometry_msgs/msg/Twist`를 검색하면 쉽게 `ROS Documentation`에서 DataType 정보를 확인할 수 있습니다.  
@@ -265,8 +265,7 @@ SLAM은 현재 위치를 추정하면서 지도를 작성하는 노드입니다.
 ```
 ros2 launch turtlebot4_navigation slam.launch.py
 ```
-![t11.png](../src/t11.png){: width="80%" height="80%"}  #터미널창
-SLAM 노드는 터틀봇의 라이다 토픽을 받아 지도를 작성하여 토픽을 내보내지만 시각적으로 보여주지는 않습니다. 
+SLAM 노드는 터틀봇의 라이다 토픽을 받아 지도를 작성하여 지도 토픽을 내보내지만 시각적으로 보여주지는 않습니다. 
 
 ##### Rviz2
 시각적으로 확인하기 위해서는 보통 Rviz라는 프로그램을 이용합니다.  
@@ -279,15 +278,16 @@ ros2 launch turtlebot4_viz view_robot.launch.py
 ```
 python3 teleop_twist_keyboard.py
 ```
-![t13.png](../src/t13.png){: width="80%" height="80%"}  #제작된 맵  
+![t13.gif](../src/t13.gif){: width="80%" height="80%"}  #제작된 맵  
   
 다음 서비스를 통해 제작된 맵을 저장할 수 있습니다.  
 ```
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap "name:
   data: 'map_name'"
 ```
-result가 0이 나와야 제대로 저장된 것입니다.  
-![t14.png](../src/t14.png){: width="80%" height="80%"}  #result=0  
+기다린 후 result=0 이 나와야 제대로 저장된 것입니다.  
+저장된 `map_name.pgm`파일을 열어보면 다음과 같이 확인할 수 있습니다.  
+![t14.png](../src/t14.png){: width="80%" height="80%"}  
 
 #### 3.2 Localization & Nav2
 ##### Localization
@@ -297,7 +297,7 @@ result가 0이 나와야 제대로 저장된 것입니다.
 ```
 ros2 launch turtlebot4_navigation localization.launch.py map:=map_name.yaml
 ```
-
+  
 ##### Nav2
 Nav2는 여러 내비게이션 도구를 사용할 수 있는 패키지입니다. 맵 상에 목표 위치를 선택하면 그 곳으로 로봇을 자동으로 이동시킬 수 있습니다.  
 `localization` 노드가 켜진 상태로 새 터미널을 열어 `nav2` 노드를 실행합니다.  
@@ -309,10 +309,16 @@ ros2 launch turtlebot4_navigation nav2.launch.py
 ```
 ros2 launch turtlebot4_viz view_robot.launch.py
 ```
+![t15.png](../src/t15.png){: width="80%" height="80%"}  
+
 Rviz2에서 여러 Navigation 툴을 이용할 수 있습니다.  
+![t16.png](../src/t16.png)    
 * 2D Pose Estimate : 대략적인 initial pose를 입력해주면 현재 위치를 추정할 수 있습니다.  
+![t17.gif](../src/t17.gif){: width="80%" height="80%"}  
 * Publish Point: Map 상에 point를 publish한다. /clicked_point 토픽으로 publish 됩니다. (`ros2 topic echo /clicked_point`로 확인)  
+![t18.gif](../src/t18.gif){: width="80%" height="80%"}  
 * Nav2 Goal: 원하는 goal pose를 설정해 주면 Nav2가 로봇을 goal pose로 이동시키려고 시도합니다. 사용하기 전 initial pose를 설정해주어야 합니다.
+![t19.gif](../src/t19.gif){: width="80%" height="80%"}  
 
 <center>
 <video width="100%" controls>
