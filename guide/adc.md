@@ -274,12 +274,12 @@ SLAM노드를 켜 놓은 상태로 다음 명령으로 rviz를 실행해봅시�
 ```
 ros2 launch turtlebot4_viz view_robot.launch.py
 ```
-![t12.png](../src/t12.png){: width="80%" height="80%"}  #Rviz창
+![t12.png](../src/t12.png){: width="80%" height="80%"}
 위의 `teleop_twist_keyboard`노드를 이용하여 터틀봇을 움직이면 지도를 작성하는 것을 확인할 수 있습니다. 
 ```
 python3 teleop_twist_keyboard.py
 ```
-![t13.gif](../src/t13.gif){: width="80%" height="80%"}  #제작된 맵  
+![t13.gif](../src/t13.gif){: width="80%" height="80%"}
   
 다음 서비스를 통해 제작된 맵을 저장할 수 있습니다.  
 ```
