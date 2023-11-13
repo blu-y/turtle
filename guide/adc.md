@@ -172,6 +172,10 @@ def main(args=None):
 ```
 python3 teleop_twist_keyboard.py
 ```
+위 코드는 ROS2 노드로도 실행할 수 있습니다.
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
 
 ##### Image Subscriber
 터틀봇의 카메라를 다음을 통해 컴퓨터로 확인할 수 있습니다.  
