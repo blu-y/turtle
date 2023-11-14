@@ -110,11 +110,14 @@ gedit teleop_twist_keyboard.py
 gedit을 이용하여 코드를 작성하셔도 되고, VS Code등의 IDE를 설치하여 사용하셔도 됩니다.  
 ```
 #!/usr/bin/env python3
-import rclpy
-from rclpy.qos import qos_profile_default
+import sys
+import threading
 from geometry_msgs.msg import Twist
-import sys, select, termios, tty
+import rclpy
+import termios
+import tty
 settings = termios.tcgetattr(sys.stdin)
+
 msg = """
 ---------------------------
 Moving around:
@@ -128,45 +131,48 @@ CTRL-C to quit
 
 moveBindings = {'i':(1,0,0,0), 'o':(1,0,0,-1), 'j':(0,0,0,1), 'l':(0,0,0,-1), 'u':(1,0,0,1),}
 
-def getKey():
-	tty.setraw(sys.stdin.fileno())
-	select.select([sys.stdin], [], [], 0)
-	key = sys.stdin.read(1)
-	termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
-	return key
+def getKey(settings):
+    tty.setraw(sys.stdin.fileno())
+    key = sys.stdin.read(1)
+    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+    return key
 
-def main(args=None):	
-	if args is None:
-		args = sys.argv
-	rclpy.init(args)
-	node = rclpy.create_node('teleop_twist_keyboard')
-	pub = node.create_publisher(Twist, 'cmd_vel', qos_profile_default)
-	speed = 0.5, turn = 1.0, x = 0, y = 0, z = 0, th = 0, status = 0
-	try:
-		print(msg)
-		while(1):
-			key = getKey()
-			if key in moveBindings.keys():
-				x = moveBindings[key][0]
-				y = moveBindings[key][1]
-				z = moveBindings[key][2]
-				th = moveBindings[key][3]
-			else:
-				x = 0, y = 0, z = 0, th = 0
-				if (key == '\x03'):
-					break
-			twist = Twist()
-			twist.linear.x = x*speed; twist.linear.y = y*speed; twist.linear.z = z*speed;
-			twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = th*turn
-			pub.publish(twist)
-	except:
-		print(e)
-	finally:
-		twist = Twist()
-		twist.linear.x = 0.0; twist.linear.y = 0.0; twist.linear.z = 0.0
-		twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = 0.0
-		pub.publish(twist)
-		termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
+def main():
+    rclpy.init()
+    node = rclpy.create_node('teleop_twist_keyboard')
+    pub = node.create_publisher(Twist, 'cmd_vel', 10)
+    spinner = threading.Thread(target=rclpy.spin, args=(node,))
+    spinner.start()
+    speed = 0.5; turn = 1.0; x = 0; y = 0; z = 0; th = 0; status = 0
+    try:
+        print(msg)
+        while True:
+            key = getKey(settings)
+            if key in moveBindings.keys():
+                x = moveBindings[key][0]
+                y = moveBindings[key][1]
+                z = moveBindings[key][2]
+                th = moveBindings[key][3]
+            else:
+                x = 0; y = 0; z = 0; th = 0
+                if (key == '\x03'):
+                    break
+            twist = Twist()
+            twist.linear.x = x*speed; twist.linear.y = y*speed; twist.linear.z = z*speed;
+            twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = th*turn
+            pub.publish(twist)
+    except Exception as e:
+        print(e)
+    finally:
+        twist = Twist()
+        twist.linear.x = 0.0; twist.linear.y = 0.0; twist.linear.z = 0.0
+        twist.angular.x = 0.0; twist.angular.y = 0.0; twist.angular.z = 0.0
+        pub.publish(twist)
+        rclpy.shutdown()
+        spinner.join()
+
+if __name__ == '__main__':
+    main()
 ```
 모두 작성하면 저장한 후 다음 명령을 통해 코드를 실행하면 `u`, `i`, `o`, `j`, `k`, `l` 키를 이용해 키보드로 터틀봇을 움직일 수 있습니다.  
 ```
