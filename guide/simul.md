@@ -12,5 +12,5 @@ sudo apt update
 sudo apt install ros-humble-turtlebot4-simulator
 
 # launch
-ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py
+ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py  
 ros2 launch turtlebot4_ignition_bringup turtlebot4_ignition.launch.py slam:=true nav2:=true rviz:=true
