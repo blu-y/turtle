@@ -1,5 +1,6 @@
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
+echo "alias domain='wget https://raw.githubusercontent.com/blu-y/turtle/main/set_domain.sh | bash <(cat) </dev/tty'" >> ~/.bashrc
 source ~/.bashrc
 
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
@@ -36,3 +37,4 @@ echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 echo "export ROS_DOMAIN_ID=0" >> ~/.bashrc
 
 eval "$(cat ~/.bashrc | tail -n +10)"
+echo "Type 'source ~/.bashrc' to apply settings"
