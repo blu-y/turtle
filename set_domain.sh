@@ -59,6 +59,7 @@ fi
 sudo mkdir -p /etc/turtlebot4_discovery/
 
 # Clone turtlebot4_setup and install files
+sudo apt install git -y
 git clone -b humble https://github.com/turtlebot/turtlebot4_setup.git /tmp/turtlebot4_setup/ &> /dev/null
 sudo mv /tmp/turtlebot4_setup/turtlebot4_discovery/ip_route.sh /usr/local/sbin/
 sudo mv /tmp/turtlebot4_setup/turtlebot4_discovery/ip_route.service /etc/systemd/system/
