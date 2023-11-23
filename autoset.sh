@@ -1,6 +1,5 @@
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
-echo "alias domain='wget https://raw.githubusercontent.com/blu-y/turtle/main/set_domain.sh | bash <(cat) </dev/tty'" >> ~/.bashrc
 source ~/.bashrc
 
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
