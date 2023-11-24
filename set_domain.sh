@@ -28,6 +28,9 @@ case $domain_id in
   50)
     ip=192.168.50.156
     ;;
+  34)
+    ip=192.168.50.98
+    ;;
   * )
     echo "No matching domain"
     exit 0
