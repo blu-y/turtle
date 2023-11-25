@@ -88,5 +88,6 @@ fi
 sudo systemctl enable ip_route.service
 sudo systemctl restart ip_route.service
 
-echo "Source your ~/.bashrc file to apply changes"
+echo "Source your ~/.bashrc file and restart ros2 daemon to apply changes"
+echo "'source ~/.bashrc && ros2 daemon stop && ros2 daemon start'"
 #END
