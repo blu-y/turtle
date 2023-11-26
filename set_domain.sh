@@ -4,6 +4,9 @@ read -p "ROS_DOMAIN_ID [0]: " domain_id
 domain_id=${domain_id:-0}
 
 case $domain_id in
+  0)
+    ip=10.42.0.1
+    ;;
   28)
     ip=192.168.50.75
     ;;
