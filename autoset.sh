@@ -1,7 +1,3 @@
-echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
-echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
-source ~/.bashrc
-
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
 sudo vi /etc/apt/sources.list +%s/security.ubuntu.com/mirror.kakao.com +wq!
 sudo vi /etc/apt/sources.list +%s/ports.ubuntu.com/mirror.yuki.net.uk +wq!
@@ -32,8 +28,16 @@ sudo apt install ros-humble-octomap-ros libgoogle-glog-dev libgflags-dev -y
 sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation ros-humble-teleop-twist-keyboard ros-humble-irobot-create-msgs -y
 printenv | grep -i ROS
 
+echo "sudo sysctl net.ipv4.ipfrag_time=3" >> ~/.bashrc
+echo "sudo sysctl net.ipv4.ipfrag_high_thresh=134217728" >> ~/.bashrc
+
+echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
+echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 echo "export ROS_DOMAIN_ID=0" >> ~/.bashrc
+source ~/.bashrc
+
+
 
 eval "$(cat ~/.bashrc | tail -n +10)"
 echo "Type 'source ~/.bashrc' to apply settings"
