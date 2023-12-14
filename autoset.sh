@@ -44,7 +44,5 @@ echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 echo "export ROS_DOMAIN_ID=0" >> ~/.bashrc
 source ~/.bashrc
 
-
-
 eval "$(cat ~/.bashrc | tail -n +10)"
 echo "Type 'source ~/.bashrc' to apply settings"
