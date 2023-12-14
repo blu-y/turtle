@@ -23,13 +23,17 @@ sudo rosdep init
 rosdep update
 sudo apt install ~nros-humble-rqt* -y
 sudo apt install python3-colcon-common-extensions -y
-echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
-echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
-echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
 sudo apt-get install ros-humble-gazebo-msgs ros-humble-gazebo-plugins ros-humble-gazebo-ros ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs -y
 sudo apt install ros-humble-octomap-ros libgoogle-glog-dev libgflags-dev -y
 sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation ros-humble-teleop-twist-keyboard ros-humble-irobot-create-msgs -y
-printenv | grep -i ROS
+printenv | grep -i ROS_DISTRO
+
+echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
+echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
+echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python -y
+sudo rosdep init
+rosdep update
 
 echo "sudo sysctl net.ipv4.ipfrag_time=3" >> ~/.bashrc
 echo "sudo sysctl net.ipv4.ipfrag_high_thresh=134217728" >> ~/.bashrc
