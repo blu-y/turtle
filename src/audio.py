@@ -22,11 +22,15 @@ class AudioNoteSequenceClient(Node):
 
     def melody(self, notes_str, bpm=120):
         tempo = 60000000000/bpm
-        s, ns = divmod(tempo,1000000000)
         notes = notes_str.split()
         note_sequence = []
         for note in notes:
+            n = note.split("_")
+            key = n[0]
+            try: l = float(n[1])
+            except: l = 1
             f = self.note_to_frequency(note)
+            s, ns = divmod(tempo*l,1000000000)
             note_sequence.append(AudioNote(frequency=f, max_runtime=Duration(sec=int(s), nanosec=int(ns))))
         return note_sequence
 
@@ -50,7 +54,8 @@ class AudioNoteSequenceClient(Node):
 def main(args=None):
     rclpy.init(args=args)
     action_client = AudioNoteSequenceClient()
-    note_sequence = action_client.melody("C3 D3 D3# D3 D3# F4 F4# F4 A4# G4")
+    # note_sequence = action_client.melody("C4 D4 D4# D4 D4# F4 F4# F4 A4# G4")
+    note_sequence = action_client.melody("C4_0.5 D4_0.5 D4#_0.5 D4_2.5 D4#_0.5 F4_0.5 F4#_0.5 F4_2.5 A4#_2 G4_2")
     print(note_sequence)
     action_client.send_goal(note_sequence)
     rclpy.spin(action_client)
