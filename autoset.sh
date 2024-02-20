@@ -29,20 +29,27 @@ sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation 
 sudo apt install 
 printenv | grep -i ROS_DISTRO
 
+echo "# colcon_cd Setting " >> ~/.bashrc
 echo "source /usr/share/colcon_cd/function/colcon_cd.sh" >> ~/.bashrc
 echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
+echo "" >> ~/.bashrc
+
 sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python -y
 sudo rosdep init
 rosdep update
 
+echo "# ipfrag Setting " >> ~/.bashrc
 echo "sudo sysctl net.ipv4.ipfrag_time=3" >> ~/.bashrc
 echo "sudo sysctl net.ipv4.ipfrag_high_thresh=134217728" >> ~/.bashrc
+echo "" >> ~/.bashrc
 
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 echo "export RMW_IMPLEMENTATION=rmw_fastrtps_cpp" >> ~/.bashrc
 echo "export ROS_DOMAIN_ID=0" >> ~/.bashrc
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+echo "" >> ~/.bashrc
 source ~/.bashrc
 
 eval "$(cat ~/.bashrc | tail -n +10)"
