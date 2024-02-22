@@ -14,7 +14,7 @@ class LiDARSubscriber(Node) :
         LaserScan, '/scan', self.lidar_cb, qos_profile_sensor_data)
      self.length = 0
      self.res = 40
-     self.cmap = cm.get_cmap('summer', 256)
+     self.cmap = cm.get_cmap('jet', 256)
 
    def lidar_cb(self, msg) :
      self.lidar = msg.ranges
@@ -27,7 +27,7 @@ class LiDARSubscriber(Node) :
      self.lidar = np.array(self.lidar)
      self.lidar[self.lidar==np.inf] = 0
 
-     self.viz = np.ones((self.size, self.size, 3))*255
+     self.viz = np.zeros((self.size, self.size, 3))*255
      # x coordinate
      x_c = np.cos(self.inc*self.ind)*self.lidar*self.size/self.m+self.size/2
      y_c = -np.sin(self.inc*self.ind)*self.lidar*self.size/self.m+self.size/2
