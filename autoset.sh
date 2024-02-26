@@ -52,5 +52,8 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 echo "" >> ~/.bashrc
 source ~/.bashrc
 
+echo "" >> ~/.bashrc
+echo "" >> ~/.bashrc
+echo "" >> ~/.bashrc
 eval "$(cat ~/.bashrc | tail -n +10)"
 echo "Type 'source ~/.bashrc' to apply settings"
