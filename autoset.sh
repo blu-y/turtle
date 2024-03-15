@@ -26,7 +26,7 @@ sudo apt install ~nros-humble-rqt* -y
 sudo apt install python3-colcon-common-extensions ros-humble-image-transport-plugins python3-pip pv -y
 sudo apt-get install ros-humble-gazebo-msgs ros-humble-gazebo-plugins ros-humble-gazebo-ros ros-humble-gazebo-ros2-control ros-humble-gazebo-ros-pkgs -y
 sudo apt install ros-humble-octomap-ros libgoogle-glog-dev libgflags-dev -y
-sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation ros-humble-teleop-twist-keyboard ros-humble-irobot-create-msgs -y
+sudo apt install ros-humble-turtlebot4-desktop ros-humble-turtlebot4-navigation ros-humble-teleop-twist-keyboard ros-humble-irobot-create-msgs ros-humble-turtlebot4-msgs -y
 sudo apt install 
 printenv | grep -i ROS_DISTRO
 
