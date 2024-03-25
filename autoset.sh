@@ -1,6 +1,6 @@
 sudo vi /etc/apt/sources.list +%s/kr.archive.ubuntu.com/mirror.kakao.com +wq!
 sudo vi /etc/apt/sources.list +%s/security.ubuntu.com/mirror.kakao.com +wq!
-sudo vi /etc/apt/sources.list +%s/ports.ubuntu.com/mirror.yuki.net.uk +wq!
+sudo vi /etc/apt/sources.list +%s/ports.ubuntu.com/ftp.kaist.ac.kr +wq!
 sudo add-apt-repository ppa:graphics-drivers/ppa -y
 sudo apt update
 sudo apt install fonts-noto-cjk-extra gnome-user-docs-ko hunspell-ko ibus-hangul language-pack-gnome-ko language-pack-ko hunspell-en-gb hunspell-en-au hunspell-en-ca hunspell-en-za -y
