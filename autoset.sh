@@ -36,7 +36,7 @@ echo "export _colcon_cd_root=/opt/ros/humble/" >> ~/.bashrc
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
 echo "" >> ~/.bashrc
 
-sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python -y
+sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python axel -y
 sudo rosdep init
 rosdep update
 
