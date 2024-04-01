@@ -40,10 +40,17 @@ sudo apt install python3-bloom python3-rosdep fakeroot debhelper dh-python axel 
 sudo rosdep init
 rosdep update
 
-echo "# ipfrag Setting " >> ~/.bashrc
-echo "sudo sysctl net.ipv4.ipfrag_time=3" >> ~/.bashrc
-echo "sudo sysctl net.ipv4.ipfrag_high_thresh=134217728" >> ~/.bashrc
-echo "" >> ~/.bashrc
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+echo "deb http://deb.anydesk.com/ all main" > ./anydesk-stable.list
+sudo mv anydesk-stable.list /etc/apt/sources.list.d/anydesk-stable.list
+sudo apt update
+sudo apt install anydesk -y
+sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+
+# echo "# ipfrag Setting " >> ~/.bashrc
+# echo "sudo sysctl net.ipv4.ipfrag_time=3" >> ~/.bashrc
+# echo "sudo sysctl net.ipv4.ipfrag_high_thresh=134217728" >> ~/.bashrc
+# echo "" >> ~/.bashrc
 
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
