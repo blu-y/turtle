@@ -2,8 +2,8 @@ sudo apt update
 sudo apt install vim -y
 sudo vi /etc/apt/sources.list +%s/ports.ubuntu.com/ftp.kaist.ac.kr +wq!
 sudo apt update
-sudo apt install firefox -y
 sudo apt install python3-pip libopenblas-dev axel -y
+sudo apt install firefox -y
 pip install --upgrade pip
 sudo -H pip install -U jetson-stats
 pip install numpy=='1.26.1'
