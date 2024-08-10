@@ -52,7 +52,7 @@ echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft
 rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update
-sudo apt install code # or code-insiders -y
+sudo apt install code -y
 
 echo "" >> ~/.bashrc
 echo "# colcon_cd Setting " >> ~/.bashrc
