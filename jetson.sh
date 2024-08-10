@@ -53,6 +53,10 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update
 sudo apt install code -y
+xdg-mime default code.desktop text/plain
+sudo update-alternatives --set editor /usr/bin/code
+sudo update-alternatives --install /usr/bin/editor editor $(which code) 10
+sudo update-alternatives --set editor /usr/bin/code
 
 echo "" >> ~/.bashrc
 echo "# colcon_cd Setting " >> ~/.bashrc
